@@ -1,0 +1,193 @@
+/* ================================
+   GLOBAL VARIABLES (لو مش موجودة)
+================================ */
+:root {
+  --blue: #1D75F2;
+  --danger: #DC2626;
+}
+
+/* ================================
+   SIDEBAR CONTAINER
+================================ */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+
+  color: #1A1A1A;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: width 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+
+  border-right: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 2px 0 12px rgba(0,0,0,0.05);
+}
+
+/* ================================
+   COLLAPSED STATE
+================================ */
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* ================================
+   TOGGLE BUTTON
+================================ */
+.toggle-btn {
+  background: none;
+  border: none;
+
+  color: var(--blue);
+  font-size: 20px;
+  cursor: pointer;
+
+  margin-bottom: 20px;
+  padding: 5px;
+
+  transition: transform 0.2s;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.15);
+}
+
+/* ================================
+   SIDEBAR TITLE
+================================ */
+.sidebar-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  font-size: 0.85rem;
+  color: #6B7280;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar.collapsed .sidebar-title {
+  display: none;
+}
+
+/* ================================
+   SIDEBAR LINKS
+================================ */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #374151;
+  padding: 10px;
+  margin: 6px 0;
+
+  text-decoration: none;
+  border-radius: 10px;
+
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-link:hover {
+  background: rgba(29,117,242,0.10);
+  color: var(--blue);
+}
+
+/* Active state */
+.sidebar-link.active {
+  background: rgba(29,117,242,0.15);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Center icons when collapsed */
+.sidebar.collapsed .sidebar-link {
+  justify-content: center;
+}
+
+/* ================================
+   SPACER
+================================ */
+.sidebar-spacer {
+  flex: 1;
+}
+
+/* ================================
+   LOGOUT
+================================ */
+.sidebar-link.logout {
+  color: var(--danger);
+}
+
+.sidebar-link.logout:hover {
+  background: rgba(220,38,38,0.12);
+  color: #B91C1C;
+}
+
+/* ================================
+   BOTTOM SECTION
+================================ */
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* ================================
+   SETTINGS BUTTON
+================================ */
+.settings-btn {
+  width: 100%;
+  background: none;
+  border: none;
+
+  text-align: left;
+  color: #374151;
+  padding: 10px;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: background 0.2s, color 0.2s;
+}
+
+.settings-btn:hover {
+  background: rgba(29,117,242,0.10);
+  color: var(--blue);
+}
+
+/* ================================
+   TOOLTIP (WHEN COLLAPSED)
+================================ */
+.sidebar.collapsed .sidebar-link {
+  position: relative;
+}
+
+.sidebar.collapsed .sidebar-link:hover::after {
+  content: attr(title);
+
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  margin-left: 12px;
+  padding: 6px 12px;
+
+  background: #ffffff;
+  color: #1A1A1A;
+
+  border-radius: 8px;
+  white-space: nowrap;
+  z-index: 1000;
+
+  font-size: 0.85rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.08);
+}

@@ -1,0 +1,174 @@
+/* ================================
+   PAGE BASE
+================================ */
+.records-page {
+  padding: 24px;
+  background: #F6F8FC;
+  color: #1A1A1A;
+  font-family: "Inter", sans-serif;
+}
+
+/* ================================
+   HEADER
+================================ */
+.records-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.records-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1F2937;
+}
+
+/* ================================
+   ADD BUTTON
+================================ */
+.btn-add {
+  background: #DC2626;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(220,38,38,0.25);
+  transition: 0.2s;
+}
+
+.btn-add:hover {
+  background: #B91C1C;
+}
+
+/* ================================
+   FILTERS
+================================ */
+.records-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.records-filters input,
+.records-filters select,
+.records-filters button {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 10px 14px;
+  color: #1A1A1A;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.records-filters input::placeholder {
+  color: #9CA3AF;
+}
+
+.records-filters input:focus,
+.records-filters select:focus {
+  outline: none;
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* ================================
+   TABLE WRAPPER
+================================ */
+.records-table-wrap {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+
+  padding: 18px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* ================================
+   TABLE
+================================ */
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-table th {
+  padding-bottom: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #374151;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.records-table td {
+  padding: 14px 0;
+  color: #4B5563;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.records-table tr:hover td {
+  background: rgba(37,99,235,0.05);
+}
+
+.records-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ================================
+   TEXT HELPERS
+================================ */
+.records-table .bold {
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+.records-table .actions button {
+  background: none;
+  border: none;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #374151;
+  transition: color 0.2s, transform 0.15s;
+}
+
+.records-table .actions button:hover {
+  color: #2563EB;
+  transform: scale(1.1);
+}
+
+.records-table .actions .delete {
+  color: #DC2626;
+}
+
+.records-table .actions .delete:hover {
+  color: #B91C1C;
+}
+
+/* ================================
+   FOOTER INFO
+================================ */
+.results-info {
+  color: #6B7280;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .records-filters {
+    flex-direction: column;
+  }
+}

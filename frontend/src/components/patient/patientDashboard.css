@@ -1,0 +1,169 @@
+/* ================================
+   PATIENT DASHBOARD — Light Clinical
+================================ */
+
+.patient-dashboard {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  background: transparent;
+  color: #1A1A1A;
+  font-family: "Inter", sans-serif;
+}
+
+/* ================================
+   HEADER
+================================ */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1A1A1A;
+}
+
+.subtitle {
+  color: #6B7280;
+  font-size: 1rem;
+}
+
+/* ================================
+   STATS GRID
+================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ================================
+   STAT CARD — Glassy
+================================ */
+.stat-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  border-color: rgba(37,99,235,0.35);
+}
+
+/* Icon */
+.stat-icon {
+  font-size: 2.3rem;
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(37,99,235,0.12);
+  color: #2563EB;
+
+  border-radius: 14px;
+}
+
+/* Content */
+.stat-content h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: #1A1A1A;
+}
+
+.stat-content p {
+  margin: 0.25rem 0 0;
+  color: #6B7280;
+  font-size: 0.9rem;
+}
+
+/* ================================
+   QUICK ACCESS SECTION
+================================ */
+.quick-access {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.quick-access h2 {
+  margin: 0 0 1.5rem 0;
+  color: #1A1A1A;
+  font-size: 1.5rem;
+}
+
+/* ================================
+   ACCESS GRID
+================================ */
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ================================
+   ACCESS CARD — Soft Clinical
+================================ */
+.access-card {
+  background: rgba(255,255,255,0.9);
+
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.access-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  border-color: rgba(37,99,235,0.35);
+}
+
+/* Icon */
+.access-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #2563EB;
+}
+
+/* Content */
+.access-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1A1A1A;
+  font-size: 1.1rem;
+}
+
+.access-card p {
+  margin: 0;
+  color: #6B7280;
+  font-size: 0.9rem;
+}

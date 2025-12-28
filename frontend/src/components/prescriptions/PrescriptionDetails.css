@@ -1,0 +1,199 @@
+/* ================================
+   PAGE BASE
+================================ */
+.prescription-view-container {
+  padding: 40px;
+  background: #F6F8FC;
+  color: #1A1A1A;
+  font-family: "Inter", sans-serif;
+}
+
+/* ================================
+   BREADCRUMB
+================================ */
+.breadcrumb {
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 15px;
+}
+
+.breadcrumb span:first-child {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2563EB;
+}
+
+.breadcrumb span:first-child:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   HEADER
+================================ */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-row h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1F2937;
+}
+
+/* ================================
+   STATUS BADGE
+================================ */
+.status-badge {
+  background: rgba(220,38,38,0.12);
+  color: #DC2626;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================================
+   INFO GRID
+================================ */
+.info-grid {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ================================
+   CARDS
+================================ */
+.info-card,
+.medicines-card,
+.notes-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+
+  padding: 20px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.info-card {
+  flex: 1;
+  min-width: 260px;
+}
+
+.info-card h3,
+.medicines-card h3,
+.notes-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+/* ================================
+   MEDICINES TABLE
+================================ */
+.medicines-card table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  text-align: left;
+  font-size: 14px;
+}
+
+table th {
+  color: #374151;
+  font-weight: 700;
+  background: rgba(0,0,0,0.03);
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ================================
+   NOTES CARD
+================================ */
+.notes-card p {
+  margin: 0;
+  color: #4B5563;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ================================
+   ACTIONS
+================================ */
+.actions-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.btn-edit {
+  background: #DC2626;
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 8px 22px rgba(220,38,38,0.3);
+}
+
+.btn-edit:hover {
+  background: #B91C1C;
+}
+
+.btn-secondary {
+  background: rgba(0,0,0,0.06);
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #374151;
+  border: 1px solid rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+.btn-back {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #374151;
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .info-grid {
+    flex-direction: column;
+  }
+}

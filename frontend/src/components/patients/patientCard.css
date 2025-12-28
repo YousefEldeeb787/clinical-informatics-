@@ -1,0 +1,262 @@
+/* ================================
+   PAGE BASE
+================================ */
+.patient-card-page {
+  background: #F6F8FC;
+  color: #1A1A1A;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  padding-bottom: 40px;
+}
+
+/* ================================
+   TOPBAR
+================================ */
+.topbar {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.brand .dot {
+  width: 8px;
+  height: 8px;
+  background: #DC2626;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #6B7280;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #DC2626;
+  font-weight: 700;
+}
+
+.user-icon {
+  font-size: 22px;
+  color: #374151;
+}
+
+/* ================================
+   SHARED CARD
+================================ */
+.card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+
+  margin: 20px auto;
+  padding: 20px;
+
+  width: 90%;
+  max-width: 1000px;
+
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* ================================
+   PROFILE SECTION
+================================ */
+.profile-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(220,38,38,0.25);
+}
+
+.btn-edit {
+  background: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 8px 16px;
+
+  color: #374151;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+  font-weight: 600;
+}
+
+.btn-edit:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+.btn-medical-history {
+  background: #DC2626;
+  border: none;
+  padding: 8px 16px;
+
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.btn-medical-history:hover {
+  background: #B91C1C;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 8px;
+  color: #6B7280;
+}
+
+.icon-btn:hover {
+  color: #DC2626;
+}
+
+/* ================================
+   SUMMARY SECTION
+================================ */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.summary-grid span {
+  color: #6B7280;
+  font-size: 13px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.tags span {
+  background: rgba(220,38,38,0.12);
+  color: #B91C1C;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ================================
+   TABLE SECTIONS
+================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  color: #374151;
+  font-weight: 600;
+}
+
+td {
+  color: #4B5563;
+}
+
+.view-notes {
+  color: #DC2626;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.view-notes:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   PRESCRIPTIONS
+================================ */
+.presc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-add {
+  background: #DC2626;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background: #B91C1C;
+}
+
+/* ================================
+   AI ADVICE
+================================ */
+.ai-btn {
+  background-color: rgba(0,0,0,0.04);
+  color: #374151;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.ai-btn:hover {
+  background-color: rgba(0,0,0,0.08);
+}
+
+.ai-advice {
+  margin: 18px 0;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  color: #374151;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}

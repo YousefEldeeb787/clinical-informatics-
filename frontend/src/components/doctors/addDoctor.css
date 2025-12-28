@@ -1,0 +1,244 @@
+/* ===== ROOT (Light Clinical) ===== */
+:root {
+  --bg: #F6F8FC;
+  --panel: rgba(255,255,255,0.8);
+  --stroke: rgba(0,0,0,0.08);
+
+  --blue: #1D75F2;
+  --blue-dark: #1557c2;
+
+  --red: #EF4444;
+  --red-dark: #c62828;
+
+  --text: #1A1A1A;
+  --muted: #6B7280;
+
+  --focus: #1D75F2;
+}
+
+/* ===== BASE ===== */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui;
+  margin: 0;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+  background: rgba(255,255,255,0.9);
+
+  border-bottom: 1px solid var(--stroke);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--blue);
+}
+
+.brand .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.user-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(29,117,242,0.12);
+  color: var(--blue);
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.form-container h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* ===== FORM CARD ===== */
+.doctor-form {
+  background: var(--panel);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  box-shadow: 0 16px 36px rgba(0,0,0,0.08);
+}
+
+/* ===== FORM GRID ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full {
+  grid-column: span 2;
+}
+
+label {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===== INPUTS ===== */
+input,
+select,
+textarea {
+  background: rgba(255,255,255,0.95);
+  color: var(--text);
+
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+
+  padding: 12px 14px;
+  outline: none;
+
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Focus */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 3px rgba(29,117,242,0.15);
+}
+
+/* ===== WORKING DAYS ===== */
+.working-days .days {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.working-days label {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.working-days input {
+  accent-color: var(--blue);
+  margin-right: 6px;
+}
+
+/* ===== TIME FIELDS ===== */
+.time-fields {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.time-fields div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ===== FORM ACTIONS ===== */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Buttons */
+.btn-cancel,
+.btn-save {
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* Cancel */
+.btn-cancel {
+  background: rgba(0,0,0,0.05);
+  color: var(--muted);
+
+  border: 1px solid var(--stroke);
+}
+
+.btn-cancel:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+/* Save */
+.btn-save {
+  background: var(--blue);
+  color: white;
+
+  box-shadow: 0 10px 24px rgba(29,117,242,0.25);
+}
+
+.btn-save:hover {
+  background: var(--blue-dark);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+}

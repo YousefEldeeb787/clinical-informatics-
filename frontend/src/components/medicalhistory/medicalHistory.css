@@ -1,0 +1,306 @@
+:root{
+  --bg-main: #F6F8FC;
+
+  --panel-bg: rgba(255,255,255,0.75);
+  --panel-solid: #ffffff;
+
+  --border-light: rgba(0,0,0,0.06);
+  --shadow-soft: 0 4px 14px rgba(0,0,0,0.06);
+  --shadow-hover: 0 10px 28px rgba(0,0,0,0.10);
+
+  --text-main: #1A1A1A;
+  --text-muted: #6B7280;
+
+  --accent: #2563EB;   /* Clinical blue */
+  --danger: #DC2626;
+}
+
+/* ===== PAGE ===== */
+.medical-history-page {
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.medical-history-page h1 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+/* ===== HEADER ===== */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* ===== CATEGORY CHIPS ===== */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.category-chip {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 16px;
+
+  color: var(--text-main);
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s;
+}
+
+.category-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.category-chip.selected {
+  background: rgba(37,99,235,0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ===== CATEGORY SECTION ===== */
+.category-section {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.category-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+/* ===== ADD ENTRY BUTTON ===== */
+.btn-add-entry {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-add-entry:hover {
+  background: #1D4ED8;
+}
+
+/* ===== ENTRY ROW ===== */
+.entry-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+
+  padding: 16px;
+  background: var(--panel-solid);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.entry-row input,
+.entry-row select,
+.entry-row textarea {
+  background: #ffffff;
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-family: inherit;
+}
+
+.entry-row textarea {
+  grid-column: 1 / -1;
+}
+
+/* ===== VISIBILITY ===== */
+.visibility-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.visibility-toggle input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
+/* ===== REMOVE ===== */
+.btn-remove-entry {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-remove-entry:hover {
+  background: #B91C1C;
+}
+
+/* ===== CATEGORY LIST ===== */
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.category-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.category-card .category-header {
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.9);
+}
+
+.category-card .category-header:hover {
+  background: rgba(37,99,235,0.08);
+}
+
+.category-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.category-badge {
+  background: var(--accent);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* ===== CONTENT ===== */
+.category-content {
+  padding: 16px 20px;
+}
+
+.category-content.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ===== ENTRY ITEM ===== */
+.entry-item {
+  padding: 12px;
+  background: var(--panel-solid);
+  border-radius: 10px;
+  margin-bottom: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid var(--border-light);
+}
+
+.entry-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ===== VISIBILITY BADGE ===== */
+.visibility-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.visibility-badge.visible {
+  background: rgba(34,197,94,0.15);
+  color: #15803D;
+}
+
+.visibility-badge.hidden {
+  background: rgba(107,114,128,0.15);
+  color: #6B7280;
+}
+
+/* ===== EDIT BUTTON ===== */
+.btn-edit-entry {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border-light);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-edit-entry:hover {
+  background: rgba(37,99,235,0.08);
+}
+
+/* ===== FORM ACTIONS ===== */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btn-cancel {
+  background: #E5E7EB;
+  color: #111827;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-save,
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-save:hover,
+.btn-primary:hover {
+  background: #1D4ED8;
+}

@@ -1,0 +1,303 @@
+/* ================================
+   SURGERIES PAGE - MODERN DESIGN
+================================ */
+@import '../../styles/shared-components.css';
+
+.surgeries-page {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding: var(--spacing-xl);
+  font-family: var(--font-family);
+  animation: fadeIn var(--transition-normal);
+}
+
+/* ================================
+   HEADER
+================================ */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-header h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.btn-add {
+  background: var(--color-primary);
+  border: none;
+  color: var(--text-inverse);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.25);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.btn-add:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.35);
+}
+
+.btn-add:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   FILTERS
+================================ */
+.filters {
+  display: flex;
+  gap: var(--spacing-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+  flex: 1;
+  min-width: 200px;
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-medium);
+  padding: 10px 14px;
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.filters input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.filters input:hover,
+.filters select:hover {
+  border-color: var(--border-strong);
+}
+
+/* ================================
+   TABLE WRAPPER
+================================ */
+.table-wrap {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  animation: slideUp var(--transition-normal);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ================================
+   TABLE
+================================ */
+.surgeries-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.surgeries-table thead {
+  background: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid var(--border-medium);
+}
+
+.surgeries-table thead th {
+  text-align: left;
+  padding: var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  background: var(--bg-secondary);
+}
+
+.surgeries-table tbody tr {
+  border-bottom: 1px solid var(--border-light);
+  transition: all var(--transition-fast);
+}
+
+.surgeries-table tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.015);
+}
+
+[data-theme="dark"] .surgeries-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.surgeries-table tbody tr:hover {
+  background: var(--bg-hover);
+  transform: translateX(2px);
+}
+
+.surgeries-table tbody td {
+  text-align: left;
+  padding: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ================================
+   HELPERS
+================================ */
+.bold {
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+/* ================================
+   STATUS BADGES
+================================ */
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 12px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.status.scheduled {
+  background: var(--color-info-light);
+  color: var(--color-info);
+}
+
+.status.completed {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.status.inprogress {
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.status.cancelled {
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+}
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+.surgeries-table tbody .actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.surgeries-table tbody .actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  height: 36px;
+  padding: 0 16px;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.surgeries-table tbody .actions button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.surgeries-table tbody .actions button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.surgeries-table tbody .actions button:nth-child(1) {
+  background: var(--color-info-light);
+  border-color: var(--color-info);
+  color: var(--color-info);
+}
+
+.surgeries-table tbody .actions button:nth-child(1):hover {
+  background: var(--color-info);
+  color: var(--text-inverse);
+}
+
+.surgeries-table tbody .actions button:nth-child(2) {
+  background: var(--color-warning-light);
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.surgeries-table tbody .actions button:nth-child(2):hover {
+  background: var(--color-warning);
+  color: var(--text-inverse);
+}
+
+/* ================================
+   FOOTER INFO
+================================ */
+.results-info {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .surgeries-page {
+    padding: var(--spacing-md);
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  .filters {
+    flex-direction: column;
+  }
+  
+  .filters input,
+  .filters select {
+    min-width: 100%;
+  }
+}

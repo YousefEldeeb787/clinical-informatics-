@@ -1,0 +1,243 @@
+/* ===== REGISTER CONTAINER ===== */
+.register-container {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #F6F8FC;
+  font-family: "Inter", sans-serif;
+
+  padding: 2rem;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* ===== REGISTER CARD ===== */
+.register-card {
+  width: 420px;
+  max-width: 100%;
+
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+
+  padding: 36px 40px;
+  border-radius: 20px;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  color: #1A1A1A;
+}
+
+/* ===== TITLES ===== */
+.title {
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1D75F2;
+}
+
+.register-card h2 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #4A4A4A;
+}
+
+/* ===== FORM ===== */
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.register-container input {
+  width: 100%;
+  padding: 12px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  margin-bottom: 18px;
+
+  background: rgba(255,255,255,0.9);
+  color: #1A1A1A;
+
+  outline: none;
+  transition: 0.2s;
+}
+
+.register-container input:focus {
+  border-color: #1D75F2;
+  box-shadow: 0 0 0 3px rgba(29,117,242,0.15);
+}
+
+/* Password */
+.password-wrapper {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.eye:hover {
+  opacity: 0.9;
+}
+
+/* ===== REGISTER BUTTON ===== */
+.btn-register {
+  width: 100%;
+  padding: 14px;
+
+  border-radius: 14px;
+  border: none;
+
+  background: #1D75F2;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 5px;
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  box-shadow: 0 10px 24px rgba(29,117,242,0.25);
+}
+
+.btn-register:hover {
+  background: #1557c2;
+}
+
+/* ===== SWITCH AUTH ===== */
+.switch-auth {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+  color: #4A4A4A;
+}
+
+.switch-auth a {
+  color: #1D75F2;
+  font-weight: 600;
+}
+
+/* ===== ROLE SELECTION ===== */
+.role-selection {
+  width: 100%;
+  margin-top: 28px;
+}
+
+.role-selection h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Role Cards Grid */
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* Role Card */
+.role-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+
+  padding: 18px 14px;
+  text-align: center;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(29,117,242,0.18);
+  border-color: rgba(29,117,242,0.4);
+}
+
+/* Role Content */
+.role-icon {
+  font-size: 32px;
+}
+
+.role-card h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+/* Role Header */
+.role-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* Back Button */
+.back-btn {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.12);
+
+  color: #1A1A1A;
+  padding: 8px 14px;
+
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(29,117,242,0.08);
+  border-color: #1D75F2;
+}
+
+/* Selected Role Badge */
+.selected-role-badge {
+  background: rgba(29,117,242,0.12);
+  padding: 8px 14px;
+
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #1D75F2;
+}

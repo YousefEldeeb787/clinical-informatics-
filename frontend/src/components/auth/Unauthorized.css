@@ -1,0 +1,126 @@
+.unauthorized-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+
+.unauthorized-content {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.unauthorized-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.unauthorized-content h1 {
+  color: #e53935;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.unauthorized-message {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.unauthorized-role {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.unauthorized-role strong {
+  color: #2196F3;
+  font-weight: 600;
+}
+
+.unauthorized-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.unauthorized-actions button {
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1976D2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.btn-secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #bdbdbd;
+  transform: translateY(-2px);
+}
+
+.unauthorized-help {
+  color: #999;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .unauthorized-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .unauthorized-icon {
+    font-size: 4rem;
+  }
+  
+  .unauthorized-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .unauthorized-actions {
+    flex-direction: column;
+  }
+  
+  .unauthorized-actions button {
+    width: 100%;
+  }
+}

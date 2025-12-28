@@ -1,0 +1,256 @@
+/* ===== DASHBOARD CONTAINER — Light Clinical ===== */
+.clinic-dashboard {
+  display: flex;
+  min-height: 100vh;
+
+  background: #F6F8FC;
+  color: #1A1A1A;
+
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== SIDEBAR — Glassy White ===== */
+.sidebar {
+  width: 240px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 20px 15px;
+
+  border-right: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 2px 0 12px rgba(0,0,0,0.04);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--blue);
+}
+
+/* Sidebar menu */
+.menu a {
+  display: block;
+  padding: 10px 12px;
+
+  color: #4A4A4A;
+  border-radius: 10px;
+  margin-bottom: 8px;
+
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background: rgba(29,117,242,0.10);
+  color: var(--blue);
+}
+
+.menu a.active {
+  background: rgba(29,117,242,0.15);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Bottom doctor section */
+.bottom-menu {
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 12px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.doctor-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(29,117,242,0.20);
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  padding: 28px 32px;
+}
+
+header h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+  color: var(--blue);
+}
+
+header p {
+  color: #4A4A4A;
+  margin-bottom: 26px;
+}
+
+/* ===== STATS GRID (🔥 FIXED GAP HERE) ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;                /* ✅ المسافة الصح */
+  margin-bottom: 36px;
+}
+
+/* ===== STAT CARD ===== */
+.stat-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+
+  padding: 18px 20px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+
+.stat-card h2 {
+  font-size: 26px;
+  margin: 6px 0 0;
+  color: #1A1A1A;
+}
+
+.stat-icon {
+  font-size: 28px;
+  opacity: 0.9;
+}
+
+/* ===== GRID LAYOUT (Tables + Right Panel) ===== */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* ===== TABLE — Light Clinical ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+thead {
+  background: rgba(255,255,255,0.9);
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tr:nth-child(even) {
+  background: rgba(0,0,0,0.03);
+}
+
+/* Status pills */
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.confirmed {
+  background: rgba(29,117,242,0.12);
+  color: var(--blue);
+}
+
+.status.completed {
+  background: rgba(34,199,169,0.15);
+  color: var(--green);
+}
+
+.status.cancelled {
+  background: rgba(239,68,68,0.15);
+  color: var(--red);
+}
+
+/* ===== CHART ===== */
+.chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  height: 170px;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  padding: 14px;
+
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.bar-fill {
+  width: 18px;
+  background: var(--blue);
+  border-radius: 6px;
+}
+
+/* ===== RIGHT PANEL CARDS ===== */
+.right-panel .card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.card li {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}

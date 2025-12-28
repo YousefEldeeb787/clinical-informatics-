@@ -1,0 +1,389 @@
+/* ============================================
+   GLOBAL THEME SYSTEM
+   - Light & Dark Mode Support
+   - Medical System Design
+   - CSS Variables for Easy Theming
+============================================ */
+
+:root {
+  /* ===== Color Palette - Light Mode ===== */
+  --color-primary: #DC2626;
+  --color-primary-hover: #B91C1C;
+  --color-primary-light: rgba(220, 38, 38, 0.1);
+  
+  --color-secondary: #2563EB;
+  --color-secondary-hover: #1D4ED8;
+  
+  --color-success: #10B981;
+  --color-success-light: rgba(16, 185, 129, 0.1);
+  
+  --color-warning: #F59E0B;
+  --color-warning-light: rgba(245, 158, 11, 0.1);
+  
+  --color-danger: #EF4444;
+  --color-danger-light: rgba(239, 68, 68, 0.1);
+  
+  --color-info: #3B82F6;
+  --color-info-light: rgba(59, 130, 246, 0.1);
+  
+  /* ===== Background Colors - LESS WHITE ===== */
+  --bg-primary: #F3F4F6;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: rgba(255, 255, 255, 0.85);
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --bg-active: rgba(0, 0, 0, 0.08);
+  
+  /* ===== Text Colors ===== */
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+  --text-inverse: #FFFFFF;
+  
+  /* ===== Border Colors ===== */
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.16);
+  
+  /* ===== Shadow ===== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.10);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.12);
+  
+  /* ===== Spacing ===== */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* ===== Border Radius ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+  
+  /* ===== Typography ===== */
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Fira Code", "Consolas", monospace;
+  
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* ===== Transitions ===== */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+  
+  /* ===== Z-Index ===== */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ============================================
+   DARK MODE
+============================================ */
+[data-theme="dark"] {
+  /* ===== Color Palette - Dark Mode ===== */
+  --color-primary: #EF4444;
+  --color-primary-hover: #DC2626;
+  --color-primary-light: rgba(239, 68, 68, 0.15);
+  
+  --color-secondary: #3B82F6;
+  --color-secondary-hover: #2563EB;
+  
+  --color-success: #22C55E;
+  --color-success-light: rgba(34, 197, 94, 0.15);
+  
+  --color-warning: #FBBF24;
+  --color-warning-light: rgba(251, 191, 36, 0.15);
+  
+  --color-danger: #F87171;
+  --color-danger-light: rgba(248, 113, 113, 0.15);
+  
+  --color-info: #60A5FA;
+  --color-info-light: rgba(96, 165, 250, 0.15);
+  
+  /* ===== Background Colors ===== */
+  --bg-primary: #0F172A;
+  --bg-secondary: #1E293B;
+  --bg-tertiary: rgba(30, 41, 59, 0.8);
+  --bg-hover: rgba(255, 255, 255, 0.06);
+  --bg-active: rgba(255, 255, 255, 0.10);
+  
+  /* ===== Text Colors ===== */
+  --text-primary: #F1F5F9;
+  --text-secondary: #CBD5E1;
+  --text-tertiary: #94A3B8;
+  --text-inverse: #0F172A;
+  
+  /* ===== Border Colors ===== */
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  
+  /* ===== Shadow (lighter for dark mode) ===== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================
+   GLOBAL RESETS & BASE STYLES
+============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  transition: background var(--transition-normal), color var(--transition-normal);
+}
+
+/* ============================================
+   TYPOGRAPHY
+============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+}
+
+h6 {
+  font-size: var(--font-size-md);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary-hover);
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+============================================ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-tertiary) var(--bg-primary);
+}
+
+/* ============================================
+   SELECTION
+============================================ */
+::selection {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+::-moz-selection {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+/* ============================================
+   FOCUS STYLES
+============================================ */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   UTILITY CLASSES
+============================================ */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-lg); }
+.mt-5 { margin-top: var(--spacing-xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-lg); }
+.mb-5 { margin-bottom: var(--spacing-xl); }
+
+.p-0 { padding: 0; }
+.p-1 { padding: var(--spacing-xs); }
+.p-2 { padding: var(--spacing-sm); }
+.p-3 { padding: var(--spacing-md); }
+.p-4 { padding: var(--spacing-lg); }
+.p-5 { padding: var(--spacing-xl); }
+
+/* ============================================
+   ANIMATIONS
+============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal);
+}
+
+.animate-slide-up {
+  animation: slideUp var(--transition-normal);
+}
+
+.animate-slide-down {
+  animation: slideDown var(--transition-normal);
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--transition-normal);
+}

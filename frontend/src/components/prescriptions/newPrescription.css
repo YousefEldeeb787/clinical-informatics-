@@ -1,0 +1,221 @@
+/* ================================
+   PAGE BASE
+================================ */
+.prescription-page {
+  padding: 30px;
+  background: #F6F8FC;
+  color: #1A1A1A;
+  font-family: "Inter", sans-serif;
+}
+
+.prescription-page h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1F2937;
+}
+
+/* ================================
+   SECTIONS
+================================ */
+.section {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* ================================
+   GRID
+================================ */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* ================================
+   LABELS & INPUTS
+================================ */
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 10px;
+  color: #1F2937;
+  font-family: inherit;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9CA3AF;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #DC2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,0.15);
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* ================================
+   MEDICINE ROW
+================================ */
+.medicine-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1fr 0.8fr 1fr 50px;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.add-btn {
+  background: #DC2626;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(220,38,38,0.25);
+}
+
+.add-btn:hover {
+  background: #B91C1C;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #DC2626;
+}
+
+.delete-btn:hover {
+  color: #B91C1C;
+}
+
+.delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ================================
+   FORM ACTIONS
+================================ */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  background: rgba(0,0,0,0.06);
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #374151;
+  border: 1px solid rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+.btn-save {
+  background: #DC2626;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(220,38,38,0.3);
+}
+
+.btn-save:hover {
+  background: #B91C1C;
+}
+
+/* ================================
+   VISIT SUMMARY
+================================ */
+.visit-summary {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+.visit-summary h4 {
+  margin: 0 0 0.5rem;
+  color: #1F2937;
+}
+
+.visit-summary p {
+  margin: 0.25rem 0;
+  color: #4B5563;
+}
+
+/* ================================
+   NOTES
+================================ */
+.existing-medicine-note {
+  font-size: 0.85rem;
+  color: #F59E0B;
+  margin-left: 0.5rem;
+}
+
+/* ================================
+   TOAST
+================================ */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #16A34A;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  z-index: 2000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
