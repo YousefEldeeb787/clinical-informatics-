@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ?? Surgery Clinic Management System
 
 A full-stack web application for managing a surgery clinic with features for appointments, patient records, surgeries, prescriptions, and more.
@@ -296,3 +297,6 @@ For questions or support, contact the development team.
 ---
 
 **Last Updated**: January 2025
+=======
+# clinical-informatics-
+>>>>>>> 7145084faf617c72700b0f56c1957376e5fa8727
