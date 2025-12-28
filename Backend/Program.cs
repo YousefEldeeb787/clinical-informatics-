@@ -316,7 +316,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins(corsOrigins)
+        policy.WithOrigins("http://localhost:5173")
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();
@@ -364,6 +364,13 @@ builder.Services.AddScoped<IBillingService, BillingService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IFileStorageService, LocalFileStorageService>();
 builder.Services.AddScoped<IReportingService, ReportingService>();
+
+// AI Assistant Services
+builder.Services.AddScoped<IOcrService, OcrService>();
+builder.Services.AddScoped<INlpService, NlpService>();
+builder.Services.AddScoped<IOntologyService, OntologyService>();
+builder.Services.AddScoped<ICDSSService, CDSSService>();
+builder.Services.AddHttpClient(); // For API calls in AI services
 
 // Background Services
 builder.Services.AddHostedService<AppointmentReminderBackgroundService>();
@@ -429,7 +436,7 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseMiddleware<AuditLoggingMiddleware>();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 // Serve static files from uploads folder
 app.UseStaticFiles();

@@ -31,6 +31,11 @@ namespace ClinicSystemBackend.Data
         public DbSet<Insurance> Insurances { get; set; }
         public DbSet<Billing> Billings { get; set; }
         public DbSet<AuditLog> AuditLogs { get; set; }
+        
+        // AI Assistant DbSets
+        public DbSet<MedicalDocument> MedicalDocuments { get; set; }
+        public DbSet<MedicalEntity> MedicalEntities { get; set; }
+        public DbSet<CDSSRecommendation> CDSSRecommendations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
